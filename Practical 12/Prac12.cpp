@@ -11,39 +11,39 @@ int front, rear;
 int n; 
 int main () 
 { 
-int v1, v2; 
-char ans ='y'; 
-void create(),bfs(int v1);  
-create(); 
+ int v1, v2; 
+ char ans ='y'; 
+ void create(),bfs(int v1);  
+ create(); 
  
-printf("The Adjacency Matrix for the graph is \n"); 
-for ( v1 = 0; v1 < n; v1++) 
-{ 
-for ( v2 = 0; v2 < n; v2++) 
-printf(" %d ",g[v1][v2]); 
-printf("\n"); 
-} 
+ printf("The Adjacency Matrix for the graph is \n"); 
+ for ( v1 = 0; v1 < n; v1++) 
+ { 
+  for ( v2 = 0; v2 < n; v2++) 
+  printf(" %d ",g[v1][v2]); 
+ printf("\n"); 
+ } 
 getch(); 
-do 
-{ 
-for ( v1 = 0; v1 < n; v1++) 
-visit[v1] = FALSE; 
+ do 
+ { 
+  for ( v1 = 0; v1 < n; v1++) 
+  visit[v1] = FALSE; 
  
-printf("Enter the Vertex from which you want to traverse: "); 
-scanf("%d", &v1); 
-if ( v1 >= n )
-printf("Invalid Vertex\n"); 
-else 
-{ 
-printf("The Breadth First Search of the Graph is\n"); 
-bfs(v1); 
-getch(); 
-}
-printf("\nDo you want to traverse from any other node?"); 
-ans=getche(); 
-}while(ans=='y'); 
-exit(0); 
-return 0;
+  printf("Enter the Vertex from which you want to traverse: "); 
+  scanf("%d", &v1); 
+  if ( v1 >= n )
+  printf("Invalid Vertex\n"); 
+ else 
+ { 
+  printf("The Breadth First Search of the Graph is\n"); 
+  bfs(v1); 
+  getch(); 
+ }
+ printf("\nDo you want to traverse from any other node?"); 
+ ans=getche(); 
+ }while(ans=='y'); 
+ exit(0); 
+ return 0;
 } 
 void create() 
 { 
