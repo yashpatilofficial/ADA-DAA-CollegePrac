@@ -4,7 +4,7 @@ int main(){
   
    int i, j, count, temp, number[25];
 
-   printf("\nEnter number of elements: ");
+   printf("\nEnter the number of elements: ");
    scanf("%d",&count);
 
    printf("\nEnter %d elements: \n", count);
